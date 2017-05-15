@@ -1,0 +1,134 @@
+.tileImg{
+    height: 30px;
+    width: 30px;
+}
+
+.minefield {
+    line-height:0;
+    border-spacing:0;
+    border: 5px;
+    table-layout: fixed;
+    margin-left:auto;
+    margin-right:auto;
+}
+#header{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    font-weight: bold;
+    font-family: Tahoma,Arial;
+    color: white;
+    font-size: 80px;
+    align-content: center;
+    text-align: center;
+}
+body {
+    background: rgba(73,155,234,1);
+    background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(32,124,229,1)));
+    background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5', GradientType=1 );
+}
+button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #050505;
+    padding: 10px 20px;
+    background: -moz-linear-gradient(
+            top,
+            #ff000d 0%,
+            #ff0000);
+    background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#ff000d),
+            to(#ff0000));
+    -moz-border-radius: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    border: 5px solid #000000;
+    -moz-box-shadow:
+            0px 1px 3px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(255,255,255,0.7);
+    -webkit-box-shadow:
+            0px 1px 3px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(255,255,255,0.7);
+    box-shadow:
+            0px 1px 3px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(255,255,255,0.7);
+    text-shadow:
+            0px -1px 0px rgba(000,000,000,0.4),
+            0px 1px 0px rgba(255,255,255,0.3);
+    margin-top: 20px;
+}
+.inputFields{
+    font-weight: bold;
+    font-family: Tahoma,Arial;
+    color: white;
+}
+.minefield td {
+    padding:0px;
+    border: 1px solid black;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    /*display: inline-block;*/
+    -moz-user-select:-moz-none;
+-moz-user-select:none;
+-o-user-select:none;
+-khtml-user-select:none;
+-webkit-user-select:none;
+-ms-user-select:none;
+user-select:none;
+
+}
+.sand{
+background-color: #F1C541;
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+}
+.grass{
+    background-color: #018E0E;
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+}
+.tile{
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 100%;
+    font-weight: bold;
+    font-family: Tahoma,Arial;
+}
+#tile_1{
+color: blue;
+}
+#tile_2{
+    color: green;
+}
+#tile_3{
+    color: red;
+}
+#tile_4{
+    color: purple;
+}
+#tile_5{
+    color: darkslategrey;
+}
+#tile_6{
+    color: darkorange;
+}
+#tile_7{
+    color: cyan;
+}
+#tile_8{
+    color: darkmagenta;
+}
+

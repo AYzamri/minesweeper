@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="TryApp">
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
+    <script type="text/javascript" src="mineSweeper.js"></script>
+
+
+</head>
+<body>
+<h1>Minesweeper</h1>
+<div id="content" ng-controller="MinesweeperController" align="center" >
+    <div id="WrittenContent">
+        <form ng-submit="submit()" >
+            <span class="inputFields">Rows</span>
+            <input type="number" required max="300" min="10"  ng-model="data.numOfRows"  >
+            <span class="inputFields">Colums</span>
+            <input type="number" required max="300" min="10" ng-model="data.numOfCols"  >
+            <span class="inputFields">Mines</span>
+            <input type="number" required max="{{data.numOfRows*data.numOfCols}}" maxlength="90000" min="1" ng-model="data.numOfMines" >
+            <br>
+            <button type="submit">Start Game</button>
+        </form>
+    </div>
+    <p class="inputFields">Remaining Flags: {{data.numOfFlags}}</p>
+    <table class="minefield">
+        <tr bindonce ng-repeat="row in minefield.rows track by $index">
+            <td  ng-repeat="spot in row.spots track by $index" ng-click="uncoverSpot($event,spot)" ng-class="{'grass':spot.isCovered&&!spot.isFlaged,'sand':!spot.isCovered }" >
+                <div ng-if="spot.isCovered" class="grass">
+                    <img ng-if="spot.isFlaged" class="tileImg" src="images/flagGrass.png" >
+                </div>
+                <div ng-if="!spot.isCovered">
+                <img ng-if=" spot.content == 'mine'" class="tileImg" src="images/mine.jpg" />
+                    <div  ng-switch on="spot.content">
+                        <span ng-switch-when=" 1" class="tile" id="tile_1">1</span>
+                        <span ng-switch-when=" 2" class="tile" id="tile_2">2</span>
+                        <span ng-switch-when=" 3" class="tile" id="tile_3">3</span>
+                        <span ng-switch-when=" 4" class="tile" id="tile_4">4</span>
+                        <span ng-switch-when=" 5" class="tile" id="tile_5">5</span>
+                        <span ng-switch-when=" 6" class="tile" id="tile_6">6</span>
+                        <span ng-switch-when=" 7" class="tile" id="tile_7">7</span>
+                        <span ng-switch-when=" 8" class="tile" id="tile_8">8</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
